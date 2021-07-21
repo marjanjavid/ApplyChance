@@ -1,0 +1,251 @@
+<div id="app">
+    <section id="navigation">
+        <div class="container-fluid">
+            <div class="mob-nav">
+                <div class="icon icon-menu-button" id="mobile-toggle"></div>
+                <div class="logo">
+                    <img src="img/logo.png" class="mob-logo-image">
+                </div>
+            </div>
+            <div class="nav-flex active" id="nav-area">
+                <img src="img/logo.png" class="logo-image">
+                <form class="search" autocomplete="off">
+                    <button type="submit" class="s-submit" value="">
+                        <img src="img/icon-search.svg" class="pt-1 cursor-pointer" />
+                    </button>
+                    <input type="text" class="s-input" placeholder="Search" name="q" />
+                </form>
+                <ul class="nav-mid">
+                    <li>Home</li>
+                    <li class="current">My CV</li>
+                    <li>Admission</li>
+                    <li>Mentoring</li>
+                    <li>Job request</li>
+                </ul>
+                <div class="icons d-flex">
+                    <div class="icon icon-vip"></div>
+                    <div class="icon icon-bell"></div>
+                    <div class="icon icon-comment"></div>
+                    <div class="icon icon-user"></div>
+                </div>
+            </div>
+            <div class="cover d-none" id="mob-cover">
+                <!-- required --->
+            </div>
+        </div>
+    </section>
+    <div class="nav-gap"></div> <!-- Required, navbar is absolute or fixed --->
+
+    <section id="my-document">
+        <div class="container">
+            <div class="w-full d-flex a-items-center mt-2 flex-col" sm="flex-row j-content-between">
+                <div class="d-flex a-items-center">
+
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0411 24.2524C14.1763 23.5275 14.6596 22.9627 15.2764 22.7453M14.0411 24.2524L12.1028 34.6426C11.8831 35.8209 12.7061 36.9233 13.8055 36.9233H33.9595C34.7853 36.9233 35.497 36.2877 35.6621 35.4027L15.2764 22.7453M14.0411 24.2524L14.5326 24.3441C14.6373 23.7828 15.0056 23.3709 15.4426 23.2168L15.443 23.2167C15.4721 23.2064 15.5022 23.197 15.533 23.1887L15.5417 23.1866L15.5435 23.1862C15.5731 23.1784 15.6019 23.1719 15.6302 23.1667L14.0411 24.2524ZM15.2764 22.7453C15.3203 22.7297 15.365 22.716 15.4102 22.704L15.2764 22.7453ZM35.1706 35.311C35.0438 35.9905 34.5142 36.4233 33.9595 36.4233H13.8055C13.072 36.4233 12.4219 35.6594 12.5944 34.7343C12.5944 34.7343 12.5944 34.7343 12.5944 34.7343L14.5326 24.3441L35.1706 35.311ZM35.1706 35.311L35.6371 32.8102L37.336 23.7027C37.3432 23.6636 37.3461 23.6251 37.3452 23.5874C37.3419 23.4563 37.2909 23.3409 37.2178 23.262C37.1465 23.1849 37.0603 23.1473 36.9713 23.1473H36.1285H33.8902H32.5387H16.6278H15.8383C15.8061 23.1473 15.7714 23.149 15.7328 23.1525C15.717 23.1539 15.6987 23.1566 15.6635 23.162L15.6612 23.1624L15.6437 23.1649L15.6375 23.1657L15.6329 23.1663L35.1706 35.311ZM34.591 20.1642C34.924 20.1642 35.2464 20.3546 35.4413 20.6691H34.3902V20.1642H34.591ZM14.7765 20.8392C13.4888 21.2602 12.4952 22.4196 12.2255 23.8652C12.2255 23.8652 12.2255 23.8652 12.2255 23.8652L11.5762 27.3461V19.1261C11.5762 18.2712 12.2029 17.6529 12.8803 17.6529H14.7765V20.8392ZM32.0387 11.907V20.6691H17.1279V11.907C17.1279 11.6825 17.2857 11.5771 17.3866 11.5771H31.7802C31.881 11.5771 32.0387 11.6823 32.0387 11.907ZM31.094 18.4519C31.094 17.8108 30.6091 17.2128 29.9183 17.2128H19.2483C18.5578 17.2128 18.0726 17.8108 18.0726 18.4519C18.0726 19.093 18.5578 19.691 19.2483 19.691H29.9183C30.6091 19.691 31.094 19.093 31.094 18.4519ZM31.094 14.6357C31.094 13.9946 30.609 13.3966 29.9183 13.3966H19.2483C18.5578 13.3966 18.0726 13.9946 18.0726 14.6357C18.0726 15.2768 18.5578 15.8748 19.2483 15.8748H29.9183C30.6091 15.8748 31.094 15.2768 31.094 14.6357Z"
+                            fill="#D3EDFF" stroke="#007AFF" />
+                    </svg>
+
+                    <h1 class="text-130 ml-2 mb-0">My Document</h1>
+                </div>
+                <button class="button navigation-button" xs="w-full">
+                    <span>Back to My CV</span>
+                    <span class="icon ml-5">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.2896 8.40758C11.4216 8.3138 11.5 8.16191 11.5 8C11.5 7.83809 11.4216 7.6862 11.2896 7.59242L1.53962 0.664218C1.38713 0.555858 1.1869 0.541689 1.02066 0.627494C0.854429 0.7133 0.75 0.884724 0.75 1.0718V14.9282C0.75 15.1153 0.854429 15.2867 1.02066 15.3725C1.1869 15.4583 1.38713 15.4441 1.53962 15.3358L11.2896 8.40758Z"
+                                fill="#D3EDFF" stroke="#007AFF" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </span>
+                </button>
+            </div>
+            <div class="doc-tabs">
+                <div class="doc-tabs-header">
+                    <div class="doc-tabs-header-item active" id="upload-tab">
+                        Upload your Document
+                    </div>
+                    <div class="doc-tabs-header-item" id="referal-tab">
+                        Add your referal
+                    </div>
+                </div>
+
+                <div class="doc-tabs-box">
+                    <!-- Upload your Document -->
+                    <div class="doc-tabs-box-content" id="upload">
+                        <div class="doc-table">
+                            <div class="doc-table-head grid cols-3">
+                                <div>Document Type</div>
+                                <div class="link">Link</div>
+                            </div>
+                            <div class="doc-table-items">
+                                <div class="item grid" sm="cols-3" *ngIf="(documentList?.length == 0 ?? true)">
+                                    No Record!
+                                </div>
+                                <!-- Normal Item -->
+                                <div class="item grid" sm="cols-3" *ngIf="(documentList?.length > 0 ?? false)">
+                                    <ng-container *ngFor="let doc of documentList">
+                                        <div>
+                                            <div class="mobile-label">Document Type</div>
+                                            {{doc.type}}
+                                        </div>
+                                        <div class="view">
+                                            <div class="mobile-label">Link</div>
+                                            <a href="{{doc.link}}">View</a>
+                                        </div>
+                                        <div class="info">
+                                            <a href="#">
+                                                <div class="dots"></div>
+                                            </a>
+                                        </div>
+                                    </ng-container>
+                                </div>
+
+                                <!-- Item for adding -->
+                                <div class="item item-add grid" sm="cols-3">
+                                    <div>
+                                        <div class="form-control">
+                                            <div class="select">
+                                                <select class="form-control" [(ngModel)]="selectedFileTypeId">
+                                                    <option [ngValue]="0" selected disabled>
+                                                        Select Document Type
+                                                    </option>
+                                                    <option *ngFor="let type of fileTypes" [ngValue]="type.id">
+                                                        {{type.name}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view">
+                                        <div class="form-control">
+                                            <div class="file file-white-glass">
+                                                <input type="file" id="file" (change)="onPickImage($event)">
+                                                <label class="file-label" for="file">
+                                                    Choose file
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="d-flex">
+                                            <div class="upload-button">
+                                                <div class="text">
+                                                    Upload
+                                                </div>
+                                                <div class="button button-blue rounded-full shadow-none"
+                                                    (click)="onUploadImage()">
+                                                    <img src="/src/assets/img/icon-upload.svg">
+                                                </div>
+                                            </div>
+                                            <div class="button button-white" (click)="onCleanForNewRecord()">
+                                                <img src="/src/assets/img/icon-multiply.svg">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Add Button -->
+                                <button class="button button-add" (click)="onAddDocument()">
+                                    <span class="icon icon-large mr-0">
+                                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22 10.024C21.9824 10.5054 21.7698 10.9603 21.4088 11.2891C21.0478 11.6178 20.5679 11.7935 20.0743 11.7777H12.9257V18.2919C12.9085 18.7734 12.696 19.2286 12.335 19.5574C11.9739 19.8862 11.4937 20.0618 11 20.0456C10.496 20.049 10.0094 19.8654 9.63893 19.5321C9.46243 19.3744 9.32128 19.1829 9.22435 18.9694C9.12743 18.756 9.07683 18.5253 9.07573 18.2919V11.7791H1.92427C1.42005 11.782 0.933552 11.5979 0.5632 11.2642C0.386696 11.1065 0.245545 10.915 0.14862 10.7015C0.0516962 10.4881 0.00109553 10.2574 0 10.024C0.0172109 9.54249 0.229694 9.08733 0.590774 8.7585C0.951853 8.42968 1.432 8.25409 1.92573 8.2703H9.07573V1.75612C9.09295 1.27474 9.30518 0.819653 9.6659 0.490643C10.0266 0.161632 10.5064 -0.0144558 11 0.00098414C11.4936 -0.0148479 11.9736 0.160872 12.3345 0.489617C12.6955 0.818362 12.9081 1.2733 12.9257 1.75469V8.2703H20.0757C20.5691 8.25486 21.0487 8.43075 21.4093 8.75945C21.77 9.08816 21.9824 9.54288 22 10.024Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Add your referal -->
+                    <div class="doc-tabs-box-content d-none" id="referal">
+                        <div class="doc-table">
+                            <div class="doc-table-head grid cols-4">
+                                <div>First Name</div>
+                                <div>Last Name</div>
+                                <div>Email</div>
+                            </div>
+                            <div class="doc-table-items">
+                                <!-- Normal Item -->
+                                <div class="item grid" sm="cols-4">
+                                    <div>
+                                        <div class="mobile-label">First Name</div>
+                                        Ed
+                                    </div>
+                                    <div>
+                                        <div class="mobile-label">Last Name</div>
+                                        Grant
+                                    </div>
+                                    <div>
+                                        <div class="mobile-label">Email</div>
+                                        edgrant@chem.ubc.ca
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <div class="dots"></div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Item for adding -->
+                                <div class="item item-add grid" sm="cols-4">
+                                    <div>
+                                        <div class="form-control">
+                                            <input class="input" placeholder="First Name" type="text">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-control">
+                                            <input class="input" placeholder="Last Name" type="text">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-control">
+                                            <input class="input" placeholder="Email" type="email">
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="d-flex">
+                                            <div class="button button-blue">
+                                                <img src="img/icon-tick.svg">
+                                            </div>
+                                            <div class="button button-white">
+                                                <img src="img/icon-multiply.svg">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Add Button -->
+                                <button class="button button-add">
+                                    <span class="icon icon-large mr-0">
+                                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22 10.024C21.9824 10.5054 21.7698 10.9603 21.4088 11.2891C21.0478 11.6178 20.5679 11.7935 20.0743 11.7777H12.9257V18.2919C12.9085 18.7734 12.696 19.2286 12.335 19.5574C11.9739 19.8862 11.4937 20.0618 11 20.0456C10.496 20.049 10.0094 19.8654 9.63893 19.5321C9.46243 19.3744 9.32128 19.1829 9.22435 18.9694C9.12743 18.756 9.07683 18.5253 9.07573 18.2919V11.7791H1.92427C1.42005 11.782 0.933552 11.5979 0.5632 11.2642C0.386696 11.1065 0.245545 10.915 0.14862 10.7015C0.0516962 10.4881 0.00109553 10.2574 0 10.024C0.0172109 9.54249 0.229694 9.08733 0.590774 8.7585C0.951853 8.42968 1.432 8.25409 1.92573 8.2703H9.07573V1.75612C9.09295 1.27474 9.30518 0.819653 9.6659 0.490643C10.0266 0.161632 10.5064 -0.0144558 11 0.00098414C11.4936 -0.0148479 11.9736 0.160872 12.3345 0.489617C12.6955 0.818362 12.9081 1.2733 12.9257 1.75469V8.2703H20.0757C20.5691 8.25486 21.0487 8.43075 21.4093 8.75945C21.77 9.08816 21.9824 9.54288 22 10.024Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="js/navbar.js"></script>
+<script src="js/mydocument.js"></script>
+<router-outlet></router-outlet>

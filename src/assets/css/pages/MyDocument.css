@@ -1,0 +1,299 @@
+#my-document .doc-tabs {
+  margin: 50px 0;
+}
+#my-document .doc-tabs-header {
+  display: flex;
+}
+#my-document .doc-tabs-header-item {
+  font-size: 14px;
+  padding: 14px 30px;
+  border: 3px solid #fff;
+  border-bottom: none;
+  border-radius: 8px 0 0 0;
+  position: relative;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  color: #66676b;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-tabs-header-item {
+    padding: 10px 20px;
+  }
+}
+#my-document .doc-tabs-header-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#my-document .doc-tabs-header-item:first-child::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 8px);
+  left: 0;
+  top: 0;
+  border-bottom: none;
+  border-radius: 8px 0 0 0;
+  border-left: 3px solid #fff;
+  margin-left: -3px;
+}
+#my-document .doc-tabs-header-item:last-child::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-bottom: none;
+  border-radius: 0 8px 0 0;
+  border-right: 3px solid #fff;
+}
+@media screen and (max-width: 400px) {
+  #my-document .doc-tabs-header-item:last-child::before {
+    height: calc(100% + 8px);
+  }
+}
+#my-document .doc-tabs-header-item:not(:first-child) {
+  margin-left: -3px;
+}
+#my-document .doc-tabs-header-item:last-child {
+  border-radius: 0 8px 0 0;
+}
+#my-document .doc-tabs-header-item.active {
+  color: #007aff;
+  box-shadow: inset 0px 39px 56px rgba(255, 255, 255, 0.5),
+    inset 0px -82px 68px rgba(229, 244, 255, 0.3),
+    inset 0px 98px 100px rgba(172, 250, 255, 0.16),
+    inset 0px 4px 18px rgba(81, 203, 255, 0.28),
+    inset 0px 1px 40px rgba(222, 239, 255, 0.2);
+}
+#my-document .doc-tabs-box {
+  background: rgba(255, 255, 250, 0.4);
+  border: 3px solid #ffffff;
+  box-shadow: inset 0px 39px 56px rgba(255, 255, 255, 0.5),
+    inset 0px 7px 11px #ffffff, inset 0px -82px 68px rgba(229, 244, 255, 0.3),
+    inset 0px 98px 100px rgba(172, 250, 255, 0.16),
+    inset 0px 4px 18px rgba(81, 203, 255, 0.28),
+    inset 0px 1px 40px rgba(222, 239, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+}
+#my-document .doc-tabs-box-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border: 2px solid #fff;
+}
+#my-document .doc-table {
+  position: relative;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table {
+    margin-top: 0;
+  }
+}
+#my-document .doc-table-head {
+  color: #66676b;
+  position: relative;
+  padding: 0 30px;
+}
+#my-document .doc-table-head .link:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-head {
+    display: none !important;
+  }
+}
+#my-document .doc-table-items {
+  margin-top: 15px;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-items {
+    margin-top: 0 !important;
+  }
+}
+#my-document .doc-table-items .mobile-label {
+  font-size: 14px;
+  color: #66676b;
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-items .mobile-label {
+    display: block;
+  }
+}
+#my-document .doc-table-items .item {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px 30px;
+  border: 1px solid #f2f9ff;
+  justify-content: center;
+  align-items: center;
+}
+#my-document .doc-table-items .item:not(:last-child) {
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-items .item .info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-items .item .view {
+    display: block !important;
+  }
+}
+#my-document .doc-table-items .item .form-control {
+  width: 80%;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-items .item .form-control {
+    width: 100%;
+  }
+}
+#my-document .doc-table-items .item.item-add {
+  padding: 13px 30px;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-items .item.item-add {
+    padding: 25px 30px;
+  }
+  #my-document .doc-table-items .item.item-add .view {
+    display: flex;
+    justify-content: unset;
+  }
+}
+#my-document .doc-table-items .item.item-add div:first-child .form-control {
+  width: 80%;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-items .item.item-add div:first-child .form-control {
+    width: 100%;
+  }
+}
+#my-document .doc-table-items .item.item-add .info {
+  position: relative;
+  top: unset;
+  right: unset;
+}
+#my-document .doc-table-items .item .view {
+  display: flex;
+  justify-content: center;
+}
+#my-document .doc-table-items .item .view a {
+  color: #007aff;
+}
+#my-document .doc-table-items .item .view a:hover {
+  color: rgba(8, 8, 8, 0.8);
+}
+#my-document .doc-table-items .item .info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media only screen and (max-width: 576px) {
+  #my-document .doc-table-items .item .info {
+    justify-content: center;
+  }
+}
+#my-document .doc-table-items .item .info .dots {
+  width: 6px;
+  height: 22px;
+  background: url("../../img/icon-dots.svg") left center no-repeat;
+  background-size: 100% auto;
+}
+#my-document .doc-table-items .item .info .upload-button {
+  display: flex;
+}
+#my-document .doc-table-items .item .info .upload-button .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -15px;
+  padding: 0 30px 0 20px;
+  background-color: #f3faff;
+  color: #007aff;
+  height: 48px;
+  border-radius: 50px 0 0 50px;
+}
+#my-document .doc-table-items .item .info .button {
+  width: 48px;
+  height: 48px;
+}
+#my-document .doc-table-items .item .info .button-white {
+  background: #fff;
+  color: #0480da;
+  font-size: 0.9rem;
+  margin: 0 0 0 0.6rem;
+  box-shadow: 0px 4px 16px rgba(127, 152, 180, 0.1);
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+#my-document .doc-table-items .item .info .button-white:hover {
+  background: #f2f2f2 !important;
+}
+#my-document .doc-table-items .item .info .button-blue {
+  color: #fff;
+  background: #0480da;
+  font-size: 0.9rem;
+  margin: 0 0 0 0;
+  box-shadow: 0px 4px 16px rgba(127, 152, 180, 0.1);
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+#my-document .doc-table-items .item .info .button-blue:hover {
+  background: #0471c1 !important;
+}
+#my-document .doc-table .button-add {
+  width: 100%;
+  margin-top: 15px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: rgba(4, 128, 218, 0.08);
+  color: #0480da;
+  border: 2px dashed rgba(4, 128, 218, 0.6);
+}
+#my-document .doc-table .button-add:hover {
+  background-color: rgba(var(--color-primary-d-1), 1);
+  color: white;
+}
+#my-document .form-control .select:before {
+  z-index: 2;
+  border: none;
+  background: url(../../img/icon-decrease.svg) center center no-repeat;
+  padding: 0;
+  width: 14px;
+  height: 9px;
+  transform: none;
+  margin-top: -3px;
+}
+#my-document .form-control .input,
+#my-document .form-control .file .file-label,
+#my-document .form-control .select select {
+  background: #fff;
+  border: 1px solid #e9f6ff;
+  height: 52px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 16px rgba(176, 176, 176, 0.1);
+  color: rgba(8, 8, 8, 0.6);
+}
+#my-document .form-control .select select option:not(:first-of-type) {
+  color: #080808;
+}
+#my-document .file .file-label {
+  color: #007aff !important;
+  justify-content: center;
+}
+#my-document .file .file-label:after {
+  display: none;
+}
+#my-document .file label {
+  height: 52px;
+}
+#my-document .input:focus {
+  box-shadow: 0px 4px 16px rgba(176, 176, 176, 0.1), 0 0 0 2px #007aff;
+}
