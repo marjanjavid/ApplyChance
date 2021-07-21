@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
         this.loadFileTypes();
         this.loadDocuments();
       }, err => {
-        this.modalService.error(err.message);
+        // this.modalService.error(err.message);
       }, () => {
         this.inProgress = false;
       }
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
       res => {
         this.fileTypes = res;
       }, err => {
-        this.modalService.error(err.message);
+        // this.modalService.error(err.message);
       }, () => {
         this.inProgress = false;
       }
@@ -78,24 +78,39 @@ export class AppComponent implements OnInit {
         this.fileTypes = res;
         if (res.status == true) {
           this.loadDocuments();
-          this.modalService.info(res.message);
+          // this.modalService.info(res.message);
         } else {
-          this.modalService.error(res.message ? res.message : 'Failed');
+          // this.modalService.error(res.message ? res.message : 'Failed');
         }
       }, err => {
-        this.modalService.error(err.message);
+        // this.modalService.error(err.message);
       }, () => {
         this.inProgress = false;
       }
     );
   }
+
   loadDocuments() {
     this.inProgress = true;
     this.documentService.getAllDocuments().subscribe(
       res => {
         this.documentList = res;
       }, err => {
-        this.modalService.error(err.message);
+        // this.modalService.error(err.message);
+      }, () => {
+        this.inProgress = false;
+      }
+    );
+  }
+
+  onDelete(docId: number) {
+    this.inProgress = true;
+    this.documentService.deleteDocument(docId).subscribe(
+      res => {
+        // this.modalService.info(res.message);
+        // this.documentList = res;
+      }, err => {
+        // this.modalService.error(err.message);
       }, () => {
         this.inProgress = false;
       }
