@@ -104,16 +104,19 @@ export class AppComponent implements OnInit {
   }
 
   onDelete(docId: number) {
+
     this.inProgress = true;
     this.documentService.deleteDocument(docId).subscribe(
       res => {
-        // this.modalService.info(res.message);
-        // this.documentList = res;
+        this.inProgress = false;
+        this.loadDocuments();
       }, err => {
         // this.modalService.error(err.message);
+        this.inProgress = false;
       }, () => {
         this.inProgress = false;
       }
     );
+
   }
 }

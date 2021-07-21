@@ -8,6 +8,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './services/auth/token.interceptor';
 import { LoaderComponent } from './components/loader/loader.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     FormsModule,
     HttpClientModule,
     ModalModule.forRoot(),
+    SweetAlert2Module.forRoot()
   ],
   providers: [
     {

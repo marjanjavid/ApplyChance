@@ -96,7 +96,9 @@
                                             <a href="{{doc.link}}">View</a>
                                         </div>
                                         <div class="info">
-                                            <div class="button dots" (click)="onDelete(doc.id)">
+                                            <div class="button dots"
+                                                [swal]="{ title: 'Are you sure to delete document?', showDenyButton: true }"
+                                                (confirm)="onDelete(doc.id)">
                                             </div>
                                         </div>
                                     </ng-container>
