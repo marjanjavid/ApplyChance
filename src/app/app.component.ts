@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FileTypeService } from './services/file-type.service';
 import { FileTypeViewModel } from './view-models/file-type/file-type-view-model';
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { SignInService } from './services/sign-in.service';
-import { DocumentService } from './services/document.service';
-import { DocumentModel } from './models/document/document-model';
 import { DocumentViewModel } from './view-models/document/document-view-model';
+import { AuthService } from './services/auth/auth.service';
+import { ModalService } from './services/modal.service';
+import { DocumentService } from './services/document.service';
 
 @Component({
   selector: 'app-root',
@@ -21,9 +20,10 @@ export class AppComponent implements OnInit {
   selectedFile: File;
   documentList: DocumentViewModel[];
 
-  constructor(private loginService: SignInService,
+  constructor(private authservice: AuthService,
     private fileTypeService: FileTypeService,
-    private documentService: DocumentService) {
+    private documentService: DocumentService,
+    private modalService: ModalService) {
   }
   ngOnInit(): void {
     this.login();
@@ -31,13 +31,13 @@ export class AppComponent implements OnInit {
 
   login() {
     this.inProgress = true;
-    this.loginService.login().subscribe(
+    this.authservice.login().subscribe(
       res => {
         localStorage.setItem('token', res.token);
         this.loadFileTypes();
         this.loadDocuments();
       }, err => {
-        // this.modalService.error(err.message);
+        this.modalService.error(err.message);
       }, () => {
         this.inProgress = false;
       }
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
       res => {
         this.fileTypes = res;
       }, err => {
-        // this.modalService.error(err.message);
+        this.modalService.error(err.message);
       }, () => {
         this.inProgress = false;
       }
@@ -68,6 +68,7 @@ export class AppComponent implements OnInit {
     this.selectedFileTypeId = 0;
   }
   onAddDocument() {
+    this.inProgress = true;
     let data = new FormData();
     data.append("file", this.selectedFile);
     data.append("type", this.selectedFileTypeId.toString());
@@ -75,21 +76,26 @@ export class AppComponent implements OnInit {
     this.documentService.addDocument(data).subscribe(
       res => {
         this.fileTypes = res;
-        if (res.status == true)
+        if (res.status == true) {
           this.loadDocuments();
+          this.modalService.info(res.message);
+        } else {
+          this.modalService.error(res.message ? res.message : 'Failed');
+        }
       }, err => {
-        // this.modalService.error(err.message);
+        this.modalService.error(err.message);
       }, () => {
         this.inProgress = false;
       }
     );
   }
   loadDocuments() {
+    this.inProgress = true;
     this.documentService.getAllDocuments().subscribe(
       res => {
         this.documentList = res;
       }, err => {
-        // this.modalService.error(err.message);
+        this.modalService.error(err.message);
       }, () => {
         this.inProgress = false;
       }

@@ -17,15 +17,7 @@ export class FileTypeService {
   }
 
   getFileTypes(): Observable<FileTypeViewModel[]> {
-    var token = localStorage.getItem('token') ?? '';
-    let headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
-   });
-   let options = {
-      headers: headers
-   }
-    return this.http.get<FileTypeViewModel[]>(`${this.apiUrl}`, options)
+    return this.http.get<FileTypeViewModel[]>(`${this.apiUrl}`)
       .pipe(catchError(this._errorService.handleError));
   }
 }
